@@ -34,4 +34,12 @@ router.get("/publications", (req, res) => {
   res.json({ data: publications });
 });
 
+// Example of server-side rendering (commented out)
+// router.get("/serverSide/", (req, res) => {
+//   res.send(`<h1>Hola Mengyu</h1>
+//     <h2>Publications</h2>
+//     ${publications.map((pub) => `<div>${pub.title} <strong>${pub.journal}</strong></div> `).join("\n")}
+//     `);
+// });
+
 export default router;
