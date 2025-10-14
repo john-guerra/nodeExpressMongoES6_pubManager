@@ -3,8 +3,10 @@ import { MongoClient, ObjectId } from "mongodb";
 function MyMongoDB() {
   const me = {};
 
+  const MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost:27017";
+
   const connect = async () => {
-    const client = await MongoClient.connect("mongodb://localhost:47017/");
+    const client = await MongoClient.connect(MONGODB_URI);
     const publications = client
       .db("publicationManager")
       .collection("publications");

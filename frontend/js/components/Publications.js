@@ -8,6 +8,7 @@ export default function Publications() {
         <div class="list-group-item">
           <h5 class="mb-1">${pub.title}</h5>
           <div>${pub.venue}</div>
+          ${pub.photo && `<div><img src="${pub.photo}" alt="${pub.title} Image"/></div>`}
           ${pub.authors && `<div>${pub.authors.map((a) => a.name).join(", ")}</div>`}
         </div>
       `;
